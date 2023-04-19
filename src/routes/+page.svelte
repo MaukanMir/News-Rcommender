@@ -1,13 +1,11 @@
 <script>
+    import NavBar from "../lib/Nav.svelte"
 
 
 </script>
 
 <body>
-
-    <div class="header">
-        <h1>Manufacturing Consent</h1>
-    </div>
+    <NavBar/>
 
 
 </body>
