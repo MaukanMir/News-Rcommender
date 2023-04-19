@@ -10,7 +10,6 @@ export let htmlData;
 
 <style global>
     :global(body){
-
     }
 
 </style>
