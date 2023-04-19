@@ -1,11 +1,16 @@
 <script>
-export let htmlData;
+
+
 </script>
 
 
 
 <body>
-<h1>The news brought to you</h1>
+    <div class="header">
+
+    </div>
+
+
 </body>
 
 <style global>
