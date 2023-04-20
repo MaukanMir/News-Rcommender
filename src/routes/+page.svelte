@@ -18,7 +18,11 @@
 
 <body>
     <NavBar/>
+    <div class="image-container">
+        <div class="container">
 
+        </div>
+    </div>
 
 </body>
 
@@ -28,6 +32,11 @@
 
     .header{
         color:whitesmoke;
+    }
+
+    .image-container{
+        display:flex;
+        flex-direction: column;
     }
 
 </style>
