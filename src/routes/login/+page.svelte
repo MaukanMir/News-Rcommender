@@ -12,16 +12,23 @@ let password;
     <h1 class="header">Login</h1>
 <div class="container">
     <form class ="form"> 
-    <div class="inside-form"> 
+
     <label for="username">Username</label>
     <input 
     type="text"
     placeholder="username"
     required
-    id = user
+    id = "user"
     bind:value ={user}
     >
-    </div>
+    <label for="username">Password</label>
+    <input 
+    type="password"
+    placeholder="password"
+    required
+    id = "password"
+    bind:value ={password}
+    >
 
     </form>
 </div>
@@ -59,6 +66,17 @@ let password;
         justify-content: center;
         color:blueviolet;
     }
-    
+
+    .form input{
+        border-radius: 5px;
+        padding: 5px;
+        margin-top: 10px;
+        width: 200px;
+        color:blueviolet;
+    }
+
+    .form label{
+        margin: 10px 0px;
+    }
 
 </style>
