@@ -5,25 +5,24 @@ import { onMount } from "svelte";
 
 
     let user;
-    onMount(async () => {
-    userSession.subscribe(storeValue => {
-        if (storeValue.user) {
-            user = storeValue.user;
-        }
-    });
-});
+//     onMount(async () => {
+//     userSession.subscribe(storeValue => {
+//         if (storeValue.user) {
+//             user = storeValue.user;
+//         }
+//     });
+// });
 
 </script>
 
 <body>
     <div class="container">
-
             <a href="/"><h1 class ="header">Manufacturing Consent</h1> </a>
             <a href="/"> <h2>Sustainability</h2> </a>
             <a href="/"><h2>Live</h2></a>
             <a href="/"><h2>Conflict</h2></a>
             {#if !user}
-            <a href="/"><h2>Sign In</h2></a>
+            <a href="/login"><h2>Login</h2></a>
             {:else}
             <a href="/"><h2>{user}</h2></a>
             {/if}
