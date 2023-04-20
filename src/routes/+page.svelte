@@ -14,8 +14,6 @@
 
 </script>
 
-
-
 <body>
     <NavBar/>
     <div class="image-container">
