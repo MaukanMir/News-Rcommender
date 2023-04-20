@@ -73,11 +73,23 @@ let password;
         padding: 5px;
         width: 200px;
         color:blueviolet;
+        height: 20px;
+        width:300px;
     }
 
     .form label{
         margin: 20px 0px;
         font-size: 20px;
+    }
+
+    .submit{
+        background-color:blueviolet;
+        color:white;
+        border-radius: 5px;
+        border:none;
+        height:30px;
+        width: 320px;
+        margin: 20px 0px;
     }
 
 </style>
