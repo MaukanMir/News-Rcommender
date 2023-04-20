@@ -6,6 +6,7 @@
     let user;
     let email
     let password;
+    let dob;
     
     const handleFormRequest = () => {
     
@@ -17,8 +18,23 @@
     <div class="center-container">
         <h1 class="header">Register</h1>
     <div class="container">
-        <form class ="form" on:submit|preventDefault={handleFormRequest}> 
-    
+    <form class ="form" on:submit|preventDefault={handleFormRequest}>
+            <label for="email">Email</label>
+            <input 
+            type="text"
+            placeholder="Email"
+            required
+            id = "email"
+            bind:value ={email}
+            >
+            <label for="email">Date Of Birth</label>
+            <input 
+            type="date"
+            placeholder="DOB"
+            required
+            id = "dob"
+            bind:value ={dob}
+            >
         <label for="username">Username</label>
         <input 
         type="text"
@@ -61,8 +77,8 @@
             display: flex;
             flex-direction: column;
             background-color: white;
-            height:400px;
-            width:400px;
+            height:600px;
+            width:500px;
             justify-content: center;
             align-items: center;
             border-radius: 10px;
