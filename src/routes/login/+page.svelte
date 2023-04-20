@@ -5,8 +5,13 @@ import {userSession} from "../../stores/userSession";
 </script>
 
 <NavBar/>
+<div class="center-container">
+    <h1 class="header">Login</h1>
 <div class="container">
-
+    <label/>
+    
+</div>
+    
 </div>
 <body>
 </body>
@@ -15,14 +20,23 @@ import {userSession} from "../../stores/userSession";
     :global(body){
 
     }
+    .center-container{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 200px;
+        flex-direction: column;
+    }
 
     .container{
         display: flex;
         flex-direction: column;
         background-color: white;
-        height:400px;
-        width:600px;
+        height:500px;
+        width:400px;
         justify-content: center;
+        align-items: center;
+        border-radius: 10px;
     }
 
 </style>
