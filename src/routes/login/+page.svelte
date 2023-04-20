@@ -5,17 +5,16 @@ import {userSession} from "../../stores/userSession";
 </script>
 
 <NavBar/>
+<div class="container">
+
+</div>
 <body>
-
-    <div class="container">
-
-    </div>
 </body>
 
-<style global>
-    /* :global(body){
+<style>
+    :global(body){
 
-    } */
+    }
 
     .container{
         display: flex;
