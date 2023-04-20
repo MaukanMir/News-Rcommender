@@ -2,14 +2,26 @@
 import "../../app.css";
 import NavBar from "../../lib/Nav.svelte"
 import {userSession} from "../../stores/userSession";
+
+let user;
+let password;
 </script>
 
 <NavBar/>
 <div class="center-container">
     <h1 class="header">Login</h1>
 <div class="container">
-    <label/>
-    
+    <form class ="form"> 
+    <label for="username">Username</label>
+    <input 
+    type="text"
+    placeholder="username"
+    required
+    id = user
+    bind:value ={user}
+    >
+
+    </form>
 </div>
     
 </div>
