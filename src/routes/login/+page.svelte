@@ -12,6 +12,7 @@ let password;
     <h1 class="header">Login</h1>
 <div class="container">
     <form class ="form"> 
+    <div class="inside-form"> 
     <label for="username">Username</label>
     <input 
     type="text"
@@ -20,6 +21,7 @@ let password;
     id = user
     bind:value ={user}
     >
+    </div>
 
     </form>
 </div>
@@ -50,5 +52,13 @@ let password;
         align-items: center;
         border-radius: 10px;
     }
+
+    .form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color:blueviolet;
+    }
+    
 
 </style>
