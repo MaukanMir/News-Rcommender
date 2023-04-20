@@ -91,10 +91,16 @@ let password;
         height:40px;
         width: 320px;
         margin: 20px 0px;
+        cursor: pointer;
     }
 
     .submit:hover{
         background-color: green;
+        cursor: pointer;
+    }
+
+    .register strong a{
+        text-decoration: none;
     }
 
 </style>
