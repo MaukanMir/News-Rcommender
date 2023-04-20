@@ -109,5 +109,8 @@ const handleFormRequest = () => {
     .register strong a{
         text-decoration: none;
     }
+    .register{
+        text-align: center;
+    }
 
 </style>
