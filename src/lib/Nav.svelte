@@ -5,11 +5,11 @@ import "../app.css"
 <body>
     <div class="container">
 
-            <a href="none"><h1 class ="header">Manufacturing Consent</h1> </a>
-            <a href="none"> <h2>Sustainability</h2> </a>
-            <a href="none"><h2>Live</h2></a>
-            <a href="none"><h2>Conflict</h2></a>
-            <a href="none"><h2>Sign In</h2></a>
+            <a href="/"><h1 class ="header">Manufacturing Consent</h1> </a>
+            <a href="/"> <h2>Sustainability</h2> </a>
+            <a href="/"><h2>Live</h2></a>
+            <a href="/"><h2>Conflict</h2></a>
+            <a href="/"><h2>Sign In</h2></a>
         </div>
 
 </body>
