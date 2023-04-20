@@ -36,7 +36,7 @@
         bind:value ={password}
         >
         <button class = "submit">Submit</button>
-        <p class="register">Don't have an account? Register <strong> <a href="/register">Here</a></strong></p>
+        <p class="register">Have an account? Login <strong> <a href="/login">Here</a></strong></p>
     
         </form>
     </div>
@@ -109,6 +109,9 @@
     
         .register strong a{
             text-decoration: none;
+        }
+        .register{
+            text-align: center;
         }
     
     </style>
