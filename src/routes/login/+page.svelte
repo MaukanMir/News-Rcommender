@@ -76,15 +76,17 @@ const handleFormRequest = () => {
 
     .form input{
         border-radius: 5px;
-        padding: 5px;
+        padding: 10px;
         width: 200px;
         color:blueviolet;
         height: 20px;
         width:300px;
+        border-radius: 10px;
+        border: 2px solid blueviolet;
     }
 
     .form label{
-        margin: 20px 0px;
+        margin: 15px 0px;
         font-size: 20px;
     }
 
