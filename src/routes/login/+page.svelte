@@ -30,7 +30,8 @@ let password;
     bind:value ={password}
     >
     <button class = "submit">Submit</button>
-
+    
+    <p class="register">Don't have an account? Register <strong> <a href="/register">Here</a></strong> </p>
     </form>
 </div>
     
@@ -85,11 +86,15 @@ let password;
     .submit{
         background-color:blueviolet;
         color:white;
-        border-radius: 5px;
+        border-radius: 10px;
         border:none;
-        height:30px;
+        height:40px;
         width: 320px;
         margin: 20px 0px;
+    }
+
+    .submit:hover{
+        background-color: green;
     }
 
 </style>
