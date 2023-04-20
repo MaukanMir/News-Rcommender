@@ -129,5 +129,9 @@
         .register{
             text-align: center;
         }
+
+        .header{
+            font-size: 2.0rem;
+        }
     
     </style>
