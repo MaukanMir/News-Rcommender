@@ -60,8 +60,8 @@ const handleFormRequest = () => {
         display: flex;
         flex-direction: column;
         background-color: white;
-        height:400px;
-        width:400px;
+        height:600px;
+        width:500px;
         justify-content: center;
         align-items: center;
         border-radius: 10px;
