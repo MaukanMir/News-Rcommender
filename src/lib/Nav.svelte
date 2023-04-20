@@ -27,10 +27,11 @@ import "../app.css"
 
     .container a{
         text-decoration: none;
+        color:whitesmoke;
         
     }
 
-    .container:hover{
+    .container a:hover{
         color:blueviolet;
         cursor: pointer;
     }
