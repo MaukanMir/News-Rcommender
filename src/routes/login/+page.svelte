@@ -29,6 +29,7 @@ let password;
     id = "password"
     bind:value ={password}
     >
+    <button class = "submit">Submit</button>
 
     </form>
 </div>
@@ -53,7 +54,7 @@ let password;
         display: flex;
         flex-direction: column;
         background-color: white;
-        height:500px;
+        height:400px;
         width:400px;
         justify-content: center;
         align-items: center;
@@ -70,13 +71,13 @@ let password;
     .form input{
         border-radius: 5px;
         padding: 5px;
-        margin-top: 10px;
         width: 200px;
         color:blueviolet;
     }
 
     .form label{
-        margin: 10px 0px;
+        margin: 20px 0px;
+        font-size: 20px;
     }
 
 </style>
