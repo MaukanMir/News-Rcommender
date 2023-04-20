@@ -13,9 +13,9 @@ import {userSession} from "../../stores/userSession";
 </body>
 
 <style global>
-    :global(body){
+    /* :global(body){
 
-    }
+    } */
 
     .container{
         display: flex;
@@ -23,6 +23,7 @@ import {userSession} from "../../stores/userSession";
         background-color: white;
         height:400px;
         width:600px;
+        justify-content: center;
     }
 
 </style>
