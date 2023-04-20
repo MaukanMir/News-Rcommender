@@ -5,13 +5,18 @@ import {userSession} from "../../stores/userSession";
 
 let user;
 let password;
+
+const handleFormRequest = ()=>{
+
+};
+
 </script>
 
 <NavBar/>
 <div class="center-container">
     <h1 class="header">Login</h1>
 <div class="container">
-    <form class ="form"> 
+    <form class ="form" on:submit|preventDefault={handleFormRequest}> 
 
     <label for="username">Username</label>
     <input 
