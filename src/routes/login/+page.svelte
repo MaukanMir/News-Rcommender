@@ -6,7 +6,7 @@ import {userSession} from "../../stores/userSession";
 let user;
 let password;
 
-const handleFormRequest = ()=> {
+const handleFormRequest = () => {
 
 };
 
@@ -35,8 +35,8 @@ const handleFormRequest = ()=> {
     bind:value ={password}
     >
     <button class = "submit">Submit</button>
-    
-    <p class="register">Don't have an account? Register <strong> <a href="/register">Here</a></strong> </p>
+    <p class="register">Don't have an account? Register <strong> <a href="/register">Here</a></strong></p>
+
     </form>
 </div>
     
