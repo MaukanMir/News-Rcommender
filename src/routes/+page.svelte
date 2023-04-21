@@ -2,6 +2,10 @@
     import NavBar from "../lib/Nav.svelte"
     import {userSession} from "../stores/userSession"
     import { onMount } from "svelte";
+    require('dotenv').config();
+
+    RAPID_API_KEY = process.env.RAPID_API_KEY;
+    RAPID_HOST = process.env.RAPID_HOST
 
     let user;
     onMount(async () => {
