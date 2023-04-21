@@ -1,7 +1,6 @@
 <script>
     import NavBar from "../lib/Nav.svelte"
     import {userSession} from "../stores/userSession"
-    import { onMount } from "svelte";
     require('dotenv').config();
 
     RAPID_NAME_KEY = process.env.RAPID_NAME_KEY
@@ -10,6 +9,7 @@
     RAPID_NAME_HOST = process.env.RAPID_NAME_HOST
     RAPID_HOST = process.env.RAPID_HOST
     RAPID_URL = process.env.RAPID_BASE_URL
+    import { onMount } from "svelte";
 
 
     const rapidResultsAPI = ()=>{
