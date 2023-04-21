@@ -20,7 +20,6 @@
     <NavBar/>
     <div class="image-container">
         <div class="container">
-
         </div>
     </div>
 
