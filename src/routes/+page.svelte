@@ -9,9 +9,10 @@
 
     RAPID_NAME_HOST = process.env.RAPID_NAME_HOST
     RAPID_HOST = process.env.RAPID_HOST
+    RAPID_URL = process.env.RAPID_BASE_URL
 
 
-    const configureAPI = ()=>{
+    const rapidResultsAPI = ()=>{
         const options = {
             method:"GET",
             headers:{
@@ -20,10 +21,12 @@
             }
         }
 
-    const rapid_results = fetch('', options)
+    const rapid_results = fetch(RAPID_BASE_URL, options)
 	.then(response => response.json())
 	.then(response => console.log(response))
 	.catch(err => console.error(err));
+
+    console.log(rapidResultsAPI)
     }
 
     let user;
@@ -33,6 +36,7 @@
             user = storeValue.user;
         }
     });
+    rapidResultsAPI();
 });
 
 
