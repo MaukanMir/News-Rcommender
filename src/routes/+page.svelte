@@ -12,23 +12,7 @@
     });
 });
 
-const getNewsEvents = (async ()=>{
-    const options = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': '30dea41a84mshb54915bc7ed061fp116a11jsn2d115545030e',
-		'X-RapidAPI-Host': 'google-news-api1.p.rapidapi.com'
-	}
-};
 
-const results = fetch('https://google-news-api1.p.rapidapi.com/search?language=%3CREQUIRED%3E', options)
-	.then(response => response.json())
-	.then(response => console.log(response))
-	.catch(err => console.error(err));
-
-    console.log(results)
-
-});
 
 </script>
 
