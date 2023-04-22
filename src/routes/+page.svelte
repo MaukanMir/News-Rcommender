@@ -11,14 +11,14 @@
     const rapidBaseUrl = import.meta.env.VITE_RAPID_BASE_URL;
 
     const rapidResultsAPI = () => {
-      const options = {
+    const options = {
         method: "GET",
         headers: {
             "X-RapidAPI-Key": rapidApiKey,
             "X-RapidAPI-Host": rapidHost,
         },
-      };
-      fetch(rapidBaseUrl, options)
+    };
+    fetch(rapidBaseUrl, options)
         .then(response => response.json())
         .then(response => console.log(response))
         .catch(err => console.error(err));
@@ -30,7 +30,7 @@
             user = storeValue.user;
         }
     });
-    rapidResultsAPI();
+    // rapidResultsAPI();
 
     });
 </script>
