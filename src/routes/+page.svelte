@@ -10,7 +10,7 @@
     const rapidNameHost = import.meta.env.VITE_RAPID_NAME_HOST;
     const rapidBaseUrl = import.meta.env.VITE_RAPID_BASE_URL;
 
-    const images = [
+    const slides = [
         "https://images.pexels.com/photos/12328572/pexels-photo-12328572.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "https://images.pexels.com/photos/414943/pexels-photo-414943.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "https://images.pexels.com/photos/2267338/pexels-photo-2267338.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -45,12 +45,35 @@
     // rapidResultsAPI();
 
     });
+    // Initialize the current slide index to 0
+    let currentSlideIndex = 0;
+
+    // Define the function to update the current slide index
+    const updateCurrentSlideIndex = () => {
+    currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+    };
+
+    // Start the slideshow on mount
+    onMount(() => {
+    const intervalId = setInterval(() => {
+        updateCurrentSlideIndex();
+    }, 3000); // Change the slide every 3 seconds
+
+    // Stop the slideshow on destroy
+    onDestroy(() => {
+        clearInterval(intervalId);
+    });
+    });
 </script>
 
 <body>
     <NavBar/>
         <div class="container">
-            <img alt="" class="img" src ="https://images.pexels.com/photos/2258357/pexels-photo-2258357.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/>
+            {#each slides as image, index}
+            {#if index === currentSlideIndex}
+            <img alt="" class="img" src ={image}/>
+            {/if}
+            {/each}
     </div>
 
 </body>
@@ -68,16 +91,14 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 1000px;
-        width: 2000px;
+        margin-top: 200px;
     }
 
     .img{
     object-fit: cover;
     border-radius: 10px;
-    height:1000px;
-    width:50%;
-    
+    height:600px;
+    width:600px;
     }
 
 </style>
