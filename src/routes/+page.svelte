@@ -3,6 +3,7 @@
     import NavBar from "../lib/Nav.svelte";
     import { userSession } from "../stores/userSession";
     import { onMount } from "svelte";
+
     const rapidApiKey = import.meta.env.VITE_RAPID_API_KEY;
     const rapidNameKey = import.meta.env.VITE_RAPID_NAME_KEY;
     const rapidHost = import.meta.env.VITE_RAPID_HOST;
@@ -13,8 +14,8 @@
       const options = {
         method: "GET",
         headers: {
-          [rapidNameKey]: rapidApiKey,
-          [rapidNameHost]: rapidHost,
+            "X-RapidAPI-Key": rapidApiKey,
+            "X-RapidAPI-Host": rapidHost,
         },
       };
       fetch(rapidBaseUrl, options)
@@ -29,7 +30,8 @@
             user = storeValue.user;
         }
     });
-    //   rapidResultsAPI();
+    rapidResultsAPI();
+
     });
 </script>
 
