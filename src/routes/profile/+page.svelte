@@ -1,6 +1,7 @@
 <script>
 import {userSession} from "../../stores/userSession";
 import {onMount} from "svelte";
+import Nav from "../../lib/Nav.svelte";
 
 let user;
 let email;
@@ -16,7 +17,7 @@ onMount(async()=>{
             _id = storeValue._id;
         }
     })
-})
+});
 
 
 </script>
