@@ -101,7 +101,7 @@
     transform: translate(-50%, -50%);
     color: white;
     z-index: 1;
-    text-align: center;
+    
 }
 
 .img {
@@ -113,6 +113,7 @@
     object-fit: cover;
     border-radius: 10px;
     transition: opacity 0.6s ease-in-out;
+    z-index:0;
 }
 
 </style>
