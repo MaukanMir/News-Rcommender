@@ -10,7 +10,19 @@
     
     const handleFormRequest = async () => {
         try{
-            const response = 
+            const response = await fetch("http://localhost:8093/userRegister",{
+                method:"POST",
+                headers:{
+                    "Content-Type":"application/json"
+                },
+                body: JSON.stringify({
+                    "username":user,
+                    "email":email,
+                    "dob":dob,
+                    "createdAt":new Date().getTime()
+                })
+            });
+            
         }catch(error){
             console.log(error)
         }
