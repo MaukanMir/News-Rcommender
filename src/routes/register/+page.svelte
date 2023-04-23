@@ -10,7 +10,7 @@
 
     const createUser = (userInfo)=>{
         userSession.set({
-            
+
         })
 }
     
@@ -29,6 +29,9 @@
                 })
             });
             const storedData = await response.json();
+            if(response.status === 200){
+                createUser()
+            }
             
         }catch(error){
             console.log(error)
