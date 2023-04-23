@@ -66,7 +66,7 @@
             {#each slides as slide, index}
             {#if index === currentSlideIndex}
                 <div class="image-wrapper">
-                <h3 class="header">{titles[titleIndex]}</h3>
+                <h1 class="header">{titles[titleIndex]}</h1>
                 <img alt="slide.alt" class="img" src={slide} />
                 </div>
             {/if}
@@ -96,9 +96,9 @@
 
 .header {
     position: absolute;
-    top: 50%;
+    top: 25%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-700%, -50%);
     color: white;
     z-index: 1;
     
