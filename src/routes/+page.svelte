@@ -2,7 +2,7 @@
 <script>
     import NavBar from "../lib/Nav.svelte";
     import { userSession } from "../stores/userSession";
-    import { onMount } from "svelte";
+    import { onMount, onDestroy} from "svelte";
 
     const rapidApiKey = import.meta.env.VITE_RAPID_API_KEY;
     const rapidNameKey = import.meta.env.VITE_RAPID_NAME_KEY;
@@ -21,20 +21,6 @@
         "https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     ]
 
-    // const rapidResultsAPI = () => {
-    // const options = {
-    //     method: "GET",
-    //     headers: {
-    //         "X-RapidAPI-Key": rapidApiKey,
-    //         "X-RapidAPI-Host": rapidHost,
-    //     },
-    // };
-    // fetch(rapidBaseUrl, options)
-    //     .then(response => response.json())
-    //     .then(response => console.log(response))
-    //     .catch(err => console.error(err));
-    // };
-
     let user;
     onMount(async () => {
         userSession.subscribe(storeValue => {
@@ -42,7 +28,6 @@
             user = storeValue.user;
         }
     });
-    // rapidResultsAPI();
 
     });
     // Initialize the current slide index to 0
@@ -50,7 +35,8 @@
 
     // Define the function to update the current slide index
     const updateCurrentSlideIndex = () => {
-    currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+        currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+
     };
 
     // Start the slideshow on mount
@@ -69,9 +55,9 @@
 <body>
     <NavBar/>
         <div class="container">
-            {#each slides as image, index}
+            {#each slides as slide, index}
             {#if index === currentSlideIndex}
-            <img alt="" class="img" src ={image}/>
+            <img alt="slide.alt" class="img" src ={slide}/>
             {/if}
             {/each}
     </div>
@@ -99,6 +85,7 @@
     border-radius: 10px;
     height:600px;
     width:600px;
+    transition: opacity 0.6s ease-in-out;
     }
 
 </style>
