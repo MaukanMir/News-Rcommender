@@ -64,12 +64,14 @@
     <NavBar/>
     <div class="container">
         {#each slides as slide, index}
-        {#if index === currentSlideIndex}
-        <h3 class="header">{titles[titleIndex]}</h3>
-        <img alt="slide.alt" class="img" src ={slide}/>
-        {/if}
+          {#if index === currentSlideIndex}
+            <div class="image-wrapper">
+              <h3 class="header">{titles[titleIndex]}</h3>
+              <img alt="slide.alt" class="img" src={slide} />
+            </div>
+          {/if}
         {/each}
-</div>
+      </div>
 
 </body>
 
@@ -77,7 +79,7 @@
     :global(body){
     }
 
-    .header{
+    /* .header{
         color:whitesmoke;
     }
 
@@ -96,6 +98,42 @@
     height:600px;
     width:800px;
     transition: opacity 0.6s ease-in-out;
-    }
+    } */
+    .container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200px;
+}
+
+.image-wrapper {
+  position: relative;
+  width: 80%;
+  height: 0;
+  padding-bottom: 56.25%; /* This sets the aspect ratio to 16:9 */
+}
+
+.header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  z-index: 1;
+  text-align: center;
+}
+
+.img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70%;
+  height: 70%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: opacity 0.6s ease-in-out;
+}
 
 </style>
