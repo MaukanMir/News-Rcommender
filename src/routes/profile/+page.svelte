@@ -21,6 +21,7 @@ onMount(async()=>{
 
 
 </script>
+<Nav/>
 
 <style>
 
