@@ -2,7 +2,7 @@
 <script>
     import NavBar from "../lib/Nav.svelte";
     import { userSession } from "../stores/userSession";
-    import { onMount, onDestroy} from "svelte";
+    import { onMount} from "svelte";
 
     const rapidApiKey = import.meta.env.VITE_RAPID_API_KEY;
     const rapidNameKey = import.meta.env.VITE_RAPID_NAME_KEY;
@@ -38,29 +38,24 @@
         currentSlideIndex = (currentSlideIndex + 1) % slides.length;
 
     };
-
     // Start the slideshow on mount
     onMount(() => {
     const intervalId = setInterval(() => {
         updateCurrentSlideIndex();
     }, 3000); // Change the slide every 3 seconds
+    });
 
-    // Stop the slideshow on destroy
-    onDestroy(() => {
-        clearInterval(intervalId);
-    });
-    });
 </script>
 
 <body>
     <NavBar/>
-        <div class="container">
-            {#each slides as slide, index}
-            {#if index === currentSlideIndex}
-            <img alt="slide.alt" class="img" src ={slide}/>
-            {/if}
-            {/each}
-    </div>
+    <div class="container">
+        {#each slides as slide, index}
+        {#if index === currentSlideIndex}
+        <img alt="slide.alt" class="img" src ={slide}/>
+        {/if}
+        {/each}
+</div>
 
 </body>
 
