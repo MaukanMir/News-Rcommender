@@ -21,6 +21,10 @@
         "https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     ]
 
+    const titles = [
+        
+    ]
+
     let user;
     onMount(async () => {
         userSession.subscribe(storeValue => {
