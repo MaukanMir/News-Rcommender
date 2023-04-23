@@ -9,6 +9,7 @@ onMount(async()=>{
     userSession.subscribe(storeValue =>{
         if(storeValue.user){
             user = storeValue.user;
+            email = storeValue.email;
         }
     })
 })
