@@ -24,5 +24,6 @@ onMount(async()=>{
 <Nav/>
 
 <style>
+    :global(body){}
 
 </style>
