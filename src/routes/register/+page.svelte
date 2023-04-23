@@ -8,7 +8,12 @@
     let password;
     let dob;
     
-    const handleFormRequest = () => {
+    const handleFormRequest = async () => {
+        try{
+            const response = 
+        }catch(error){
+            console.log(error)
+        }
     
     };
     
