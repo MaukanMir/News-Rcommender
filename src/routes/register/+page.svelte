@@ -8,8 +8,10 @@
     let password;
     let dob;
 
-    const createUser = async()=>{
-
+    const createUser = (userInfo)=>{
+        userSession.set({
+            
+        })
 }
     
     const handleFormRequest = async () => {
