@@ -22,7 +22,14 @@
     ]
 
     const titles = [
-        
+        "All the latest news",
+        "Find Answers",
+        "Personalized Stories",
+        "Sustainaibility",
+        "Corruption, its all here",
+        "The News like never before",
+        "Its all here",
+        "The Wonder, the excitment"
     ]
 
     let user;
