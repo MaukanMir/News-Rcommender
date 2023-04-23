@@ -29,7 +29,7 @@
         "Corruption, its all here",
         "The News like never before",
         "Its all here",
-        "The Wonder, the excitment"
+        "We got you covered"
     ]
 
     let user;
@@ -43,10 +43,12 @@
     });
     // Initialize the current slide index to 0
     let currentSlideIndex = 0;
+    let titleIndex =0
 
     // Define the function to update the current slide index
     const updateCurrentSlideIndex = () => {
         currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+        titleIndex = (titleIndex + 1) % slides.length;
 
     };
     // Start the slideshow on mount
@@ -63,6 +65,7 @@
     <div class="container">
         {#each slides as slide, index}
         {#if index === currentSlideIndex}
+        <h3 class="header">{titles[titleIndex]}</h3>
         <img alt="slide.alt" class="img" src ={slide}/>
         {/if}
         {/each}
