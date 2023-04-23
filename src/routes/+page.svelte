@@ -87,13 +87,14 @@
         justify-content: center;
         align-items: center;
         margin-top: 200px;
+
     }
 
     .img{
     object-fit: cover;
     border-radius: 10px;
     height:600px;
-    width:600px;
+    width:800px;
     transition: opacity 0.6s ease-in-out;
     }
 
