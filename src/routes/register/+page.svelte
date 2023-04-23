@@ -2,6 +2,7 @@
     import "../../app.css";
     import NavBar from "../../lib/Nav.svelte"
     import {userSession} from "../../stores/userSession";
+    import {goto} from "$app/navigation"
     
     let user;
     let email
@@ -10,6 +11,7 @@
 
     const createUser = (userInfo)=>{
         userSession.set(userInfo);
+        goto("/profile");
 }
     
     const handleFormRequest = async () => {
