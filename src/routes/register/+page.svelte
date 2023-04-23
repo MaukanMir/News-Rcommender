@@ -7,6 +7,10 @@
     let email
     let password;
     let dob;
+
+    const createUser = async()=>{
+
+}
     
     const handleFormRequest = async () => {
         try{
@@ -22,6 +26,7 @@
                     "createdAt":new Date().getTime()
                 })
             });
+            const storedData = await response.json();
             
         }catch(error){
             console.log(error)
