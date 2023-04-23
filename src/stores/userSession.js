@@ -26,5 +26,6 @@ function createSessionStorageStore(key, initialValue) {
 export const userSession = createSessionStorageStore('userSession', {
 user: null,
 _id: null,
-email: null
+email: null,
+dob:null
 });
