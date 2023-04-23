@@ -111,7 +111,7 @@
     width: 100%;
     height: 40%;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 20px;
     transition: opacity 0.6s ease-in-out;
     z-index:0;
 }
