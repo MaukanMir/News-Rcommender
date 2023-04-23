@@ -9,9 +9,7 @@
     let dob;
 
     const createUser = (userInfo)=>{
-        userSession.set({
-
-        })
+        userSession.set(userInfo);
 }
     
     const handleFormRequest = async () => {
@@ -30,7 +28,11 @@
             });
             const storedData = await response.json();
             if(response.status === 200){
-                createUser()
+                createUser({
+                    _id:storedData._id,
+                    username:storedData.username,
+                    email:storedData.email
+                })
             }
             
         }catch(error){
