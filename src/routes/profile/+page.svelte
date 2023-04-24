@@ -2,6 +2,7 @@
 import {userSession} from "../../stores/userSession";
 import {onMount} from "svelte";
 import Nav from "../../lib/Nav.svelte";
+import {goto} from "$app/navigation"
 
 let user;
 let email;
@@ -15,6 +16,8 @@ onMount(async()=>{
             email = storeValue.email;
             dob = storeValue.dob;
             _id = storeValue._id;
+        }else{
+            goto("/")
         }
     })
 });
