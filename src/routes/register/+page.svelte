@@ -8,7 +8,7 @@
     let email
     let password;
     let dob;
-
+    console.log(new Date().toISOString())
     const createUser = (userInfo)=>{
         userSession.set(userInfo);
         goto("/profile");
@@ -25,7 +25,8 @@
                     "username":user,
                     "email":email,
                     "dob":dob,
-                    "createdAt":new Date().getTime()
+                    "password":password,
+                    "createdAt":new Date().toISOString()
                 })
             });
             const storedData = await response.json();
