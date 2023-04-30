@@ -4,11 +4,11 @@ import {userSession} from "../stores/userSession"
 import { onMount } from "svelte";
 
 
-    let user;
+    let username;
     onMount(async () => {
     userSession.subscribe(storeValue => {
         if (storeValue.user) {
-            user = storeValue.user;
+            username = storeValue.username;
         }
     });
 });
@@ -21,10 +21,10 @@ import { onMount } from "svelte";
             <a href="/"> <h2>Sustainability</h2> </a>
             <a href="/"><h2>Live</h2></a>
             <a href="/"><h2>Conflict</h2></a>
-            {#if !user}
+            {#if !username}
             <a href="/login"><h2>Login</h2></a>
             {:else}
-            <a href="/"><h2>{user}</h2></a>
+            <a href="/"><h2>{username}</h2></a>
             {/if}
         </div>
 
