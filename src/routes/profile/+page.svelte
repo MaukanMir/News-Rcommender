@@ -9,6 +9,10 @@ let email;
 let dob;
 let _id;
 
+const signUserOut = ()=>{
+    userSession.set({"username":"","_id":"","email":""})
+}
+
 onMount(async()=>{
     userSession.subscribe(storeValue =>{
         if(storeValue.user){
@@ -25,6 +29,7 @@ onMount(async()=>{
 
 </script>
 <Nav/>
+
 
 <style>
     :global(body){}
