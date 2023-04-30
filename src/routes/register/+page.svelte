@@ -8,7 +8,7 @@
     let email
     let password;
     let dob;
-    
+
     const createUser = (userInfo)=>{
         userSession.set(userInfo);
         goto("/profile");
@@ -37,7 +37,6 @@
                     email:storedData.email
                 })
             }
-            
         }catch(error){
             console.log(error)
         }
@@ -132,6 +131,7 @@
             width:300px;
             border-radius: 10px;
             border: 2px solid blueviolet;
+            font-size: 20px;
         }
     
         .form label{
