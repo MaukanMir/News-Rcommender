@@ -8,6 +8,7 @@
     let email
     let password;
     let dob;
+    let duplicateError = false;
 
     const createUser = (userInfo)=>{
         userSession.set(userInfo);
@@ -36,6 +37,8 @@
                     username:storedData.username,
                     email:storedData.email
                 })
+            }else if(response.status === 409){
+                duplicateError = true;
             }
         }catch(error){
             console.log(error)
