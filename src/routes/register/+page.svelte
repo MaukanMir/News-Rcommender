@@ -4,7 +4,7 @@
     import {userSession} from "../../stores/userSession";
     import {goto} from "$app/navigation"
     
-    let user;
+    let username;
     let email
     let password;
     let dob;
@@ -24,7 +24,7 @@
                     "Content-Type":"application/json"
                 },
                 body: JSON.stringify({
-                    "username":user,
+                    "username":username,
                     "email":email,
                     "dob":dob,
                     "password":password,
@@ -78,7 +78,7 @@
         placeholder="username"
         required
         id = "user"
-        bind:value ={user}
+        bind:value ={username}
         >
         <label for="username">Password</label>
         <input 
