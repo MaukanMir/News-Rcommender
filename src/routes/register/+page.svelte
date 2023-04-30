@@ -8,7 +8,7 @@
     let email
     let password;
     let dob;
-    console.log(new Date().toISOString())
+    
     const createUser = (userInfo)=>{
         userSession.set(userInfo);
         goto("/profile");
