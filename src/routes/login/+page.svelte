@@ -7,8 +7,37 @@ let user;
 let password;
 let error = false;
 
-const handleFormRequest = () => {
+const signInUser = ()=>{
 
+}
+
+const handleFormRequest = async() => {
+    try{
+            const response = await fetch("http://localhost:8093/login",{
+                method:"POST",
+                headers:{
+                    "Content-Type":"application/json"
+                },
+                body: JSON.stringify({
+                    "username":user,
+                    "password":password
+                })
+            });
+            const storedData = await response.json();
+            if(response.status === 200){
+                error = false;
+                createUser({
+                    _id:storedData._id,
+                    username:storedData.username,
+                    email:storedData.email
+                })
+            }else if(response.status === 401){
+                error= true;
+            }
+        }catch(error){
+            console.log(error)
+        }
+    
 };
 
 </script>
@@ -37,7 +66,7 @@ const handleFormRequest = () => {
     >
     <button class = "submit">Submit</button>
     <p class ={error ? "displayError":"notDisplayError"}>Your Login credentials are incorrect</p>
-    <p class="register">Don't have an account? Register <strong> <a href="/register">Here</a></strong></p>
+    <p class="register"> Don't have an account? Register <strong> <a href="/register">Here</a></strong></p>
 
     </form>
 </div>
