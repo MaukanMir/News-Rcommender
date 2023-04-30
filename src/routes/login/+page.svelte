@@ -3,7 +3,7 @@ import "../../app.css";
 import NavBar from "../../lib/Nav.svelte"
 import {userSession} from "../../stores/userSession";
 
-let user;
+let username;
 let password;
 let error = false;
 
@@ -19,7 +19,7 @@ const handleFormRequest = async() => {
                     "Content-Type":"application/json"
                 },
                 body: JSON.stringify({
-                    "username":user,
+                    "username":username,
                     "password":password
                 })
             });
@@ -54,7 +54,7 @@ const handleFormRequest = async() => {
     placeholder="username"
     required
     id = "user"
-    bind:value ={user}
+    bind:value ={username}
     >
     <label for="username">Password</label>
     <input 
