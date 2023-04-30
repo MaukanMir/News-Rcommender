@@ -5,13 +5,13 @@ import { onMount } from "svelte";
 
 
     let user;
-//     onMount(async () => {
-//     userSession.subscribe(storeValue => {
-//         if (storeValue.user) {
-//             user = storeValue.user;
-//         }
-//     });
-// });
+    onMount(async () => {
+    userSession.subscribe(storeValue => {
+        if (storeValue.user) {
+            user = storeValue.user;
+        }
+    });
+});
 
 </script>
 
