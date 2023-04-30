@@ -36,7 +36,7 @@ const handleFormRequest = () => {
     bind:value ={password}
     >
     <button class = "submit">Submit</button>
-    <p>Your Login credentials are incorrect</p>
+    <p class ={error ? "displayError":"notDisplayError"}>Your Login credentials are incorrect</p>
     <p class="register">Don't have an account? Register <strong> <a href="/register">Here</a></strong></p>
 
     </form>
@@ -121,6 +121,7 @@ const handleFormRequest = () => {
 
     .displayError{
         color:red;
+        text-align: center;
     }
     .notDisplayError{
         display: none;
