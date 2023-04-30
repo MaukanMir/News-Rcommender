@@ -28,6 +28,9 @@ onMount(async()=>{
 
 
 </script>
+<div class="container">
+    
+</div>
 <Nav/>
 
 
