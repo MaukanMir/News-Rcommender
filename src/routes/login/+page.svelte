@@ -70,7 +70,6 @@ const handleFormRequest = async() => {
 
     </form>
 </div>
-    
 </div>
 <body>
 </body>
