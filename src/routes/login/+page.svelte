@@ -36,6 +36,7 @@ const handleFormRequest = () => {
     bind:value ={password}
     >
     <button class = "submit">Submit</button>
+    <p>Your Login credentials are incorrect</p>
     <p class="register">Don't have an account? Register <strong> <a href="/register">Here</a></strong></p>
 
     </form>
