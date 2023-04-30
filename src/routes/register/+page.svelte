@@ -171,5 +171,13 @@
         .header{
             font-size: 16px;
         }
+
+        .DisplayError{
+            text-align: center;
+            color:red;
+        }
+        .NotDisplayError{
+            display: none;
+        }
     
     </style>
