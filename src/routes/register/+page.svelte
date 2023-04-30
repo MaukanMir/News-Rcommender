@@ -89,8 +89,8 @@
         bind:value ={password}
         >
         <button class = "submit">Submit</button>
-        <p class="register">Have an account? Login <strong> <a href="/login">Here</a></strong></p>
         <p class = {duplicateError ? "DisplayError":"NotDisplayError"}>{duplicateErrorMessage}</p>
+        <p class="register">Have an account? Login <strong> <a href="/login">Here</a></strong></p>
         </form>
     </div>
         
