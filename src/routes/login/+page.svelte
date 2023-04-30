@@ -5,6 +5,7 @@ import {userSession} from "../../stores/userSession";
 
 let user;
 let password;
+let error;
 
 const handleFormRequest = () => {
 
@@ -115,6 +116,13 @@ const handleFormRequest = () => {
 
     .header{
         font-size:2.0rem;
+    }
+
+    .displayError{
+        color:red;
+    }
+    .notDisplayError{
+        display: none;
     }
 
 </style>
