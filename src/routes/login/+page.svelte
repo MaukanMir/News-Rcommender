@@ -5,7 +5,7 @@ import {userSession} from "../../stores/userSession";
 
 let user;
 let password;
-let error;
+let error = false;
 
 const handleFormRequest = () => {
 
