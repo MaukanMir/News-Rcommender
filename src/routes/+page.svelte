@@ -11,8 +11,7 @@
     const rapidBaseUrl = import.meta.env.VITE_RAPID_BASE_URL;
 
     const slides = [
-        "https://images.pexels.com/photos/12328572/pexels-photo-12328572.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        "https://images.pexels.com/photos/414943/pexels-photo-414943.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://ideas.ted.com/wp-content/uploads/sites/3/2019/04/featured_art_corruption_istock.jpg",
         "https://images.pexels.com/photos/2267338/pexels-photo-2267338.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "https://images.pexels.com/photos/5794641/pexels-photo-5794641.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "https://images.pexels.com/photos/4799534/pexels-photo-4799534.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -66,7 +65,7 @@
             {#each slides as slide, index}
             {#if index === currentSlideIndex}
                 <div class="image-wrapper">
-                <h1 class="header">{titles[titleIndex]}</h1>
+                <p class="header">{titles[titleIndex]}</p>
                 <img alt="slide.alt" class="img" src={slide} />
                 </div>
             {/if}
@@ -79,41 +78,12 @@
     :global(body){
     }
     .container {
-    position: relative;
+    position:relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 200px;
-}
-
-.image-wrapper {
-    position: relative;
-    width: 80%;
-    height: 0;
-    padding-bottom: 56.25%; /* This sets the aspect ratio to 16:9 */
-}
-
-.header {
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    transform: translate(-700%, -50%);
-    color: white;
-    z-index: 1;
-    
-}
-
-.img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 40%;
-    object-fit: cover;
-    border-radius: 20px;
-    transition: opacity 0.6s ease-in-out;
-    z-index:0;
 }
 
 </style>

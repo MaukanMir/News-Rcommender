@@ -163,7 +163,7 @@
         }
 
         .header{
-            font-size: 2.0rem;
+            font-size: 16px;
         }
     
     </style>
