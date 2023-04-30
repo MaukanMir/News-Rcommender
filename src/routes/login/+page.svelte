@@ -7,8 +7,8 @@ let user;
 let password;
 let error = false;
 
-const signInUser = ()=>{
-
+const signInUser = (userInfo)=>{
+    userSession.set(userInfo);
 }
 
 const handleFormRequest = async() => {
@@ -26,7 +26,7 @@ const handleFormRequest = async() => {
             const storedData = await response.json();
             if(response.status === 200){
                 error = false;
-                createUser({
+                signInUser({
                     _id:storedData._id,
                     username:storedData.username,
                     email:storedData.email
