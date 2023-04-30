@@ -31,11 +31,11 @@
         "We got you covered"
     ]
 
-    let user;
+    let username;
     onMount(async () => {
         userSession.subscribe(storeValue => {
         if (storeValue.user) {
-            user = storeValue.user;
+            username = storeValue.username;
         }
     });
 
