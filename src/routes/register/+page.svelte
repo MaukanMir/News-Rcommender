@@ -9,6 +9,7 @@
     let password;
     let dob;
     let duplicateError = false;
+    let duplicateErrorMessage ="";
 
     const createUser = (userInfo)=>{
         userSession.set(userInfo);
@@ -32,6 +33,7 @@
             });
             const storedData = await response.json();
             if(response.status === 200){
+                duplicateError = false;
                 createUser({
                     _id:storedData._id,
                     username:storedData.username,
@@ -39,6 +41,7 @@
                 })
             }else if(response.status === 409){
                 duplicateError = true;
+                duplicateErrorMessage = storedData.body
             }
         }catch(error){
             console.log(error)
@@ -87,7 +90,7 @@
         >
         <button class = "submit">Submit</button>
         <p class="register">Have an account? Login <strong> <a href="/login">Here</a></strong></p>
-    
+        <p class = {duplicateError ? "DisplayError":"NotDisplayError"}>{duplicateErrorMessage}</p>
         </form>
     </div>
         
