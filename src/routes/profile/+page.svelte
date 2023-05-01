@@ -30,8 +30,9 @@ onMount(async()=>{
 </script>
 <div class="container">
     <div class="inside-container">
-        <h2>{user}</h2>
-        <h2></h2>
+        <h2>Username:{username}</h2>
+        <h2>Email:{email}</h2>
+        <h2>Date Of Birth:{dob}</h2>
     </div>
 </div>
 <Nav/>
