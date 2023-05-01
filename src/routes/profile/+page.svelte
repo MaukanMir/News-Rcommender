@@ -40,5 +40,15 @@ onMount(async()=>{
 
 <style>
     :global(body){}
+    .container{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .inside-container{
+        display: flex;
+        flex-direction: column;
+    }
 
 </style>
