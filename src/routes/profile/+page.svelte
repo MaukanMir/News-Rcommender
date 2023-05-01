@@ -45,10 +45,13 @@ onMount(async()=>{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        background-color: whitesmoke;
+        color:blueviolet;
     }
     .inside-container{
         display: flex;
         flex-direction: column;
+        color:blueviolet;
     }
 
 </style>
