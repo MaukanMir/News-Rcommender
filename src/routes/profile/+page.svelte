@@ -56,8 +56,12 @@ onMount(async()=>{
     }
     .signout{
         color:whitesmoke;
-        background-color: green;
+        background-color: blueviolet;
         height:100px;
+    }
+    .signout:hover{
+        color:whitesmoke;
+        color:green;
     }
 
 </style>
