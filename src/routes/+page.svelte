@@ -38,7 +38,6 @@
             username = storeValue.username;
         }
     });
-
     });
     // Initialize the current slide index to 0
     let currentSlideIndex = 0;
