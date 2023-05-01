@@ -33,6 +33,7 @@ onMount(async()=>{
         <h2>Username:{username}</h2>
         <h2>Email:{email}</h2>
         <h2>Date Of Birth:{dob}</h2>
+        <button class ="signout" on:click={()=> signUserOut()}>Sign Out</button>
     </div>
 </div>
 <Nav/>
@@ -52,6 +53,11 @@ onMount(async()=>{
         display: flex;
         flex-direction: column;
         color:blueviolet;
+    }
+    .signout{
+        color:whitesmoke;
+        background-color: green;
+        height:100px;
     }
 
 </style>
