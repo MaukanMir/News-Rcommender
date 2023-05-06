@@ -169,7 +169,7 @@
         }
 
         .header{
-            font-size: 16px;
+            font-size: 2rem;
         }
 
         .DisplayError{
