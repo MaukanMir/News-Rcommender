@@ -111,7 +111,9 @@
     border: whitesmoke solid 3px;
 }
 
-.topicsContainer{margin: 10px 10px;
+.topicsContainer{
+    margin: 10px 10px;
+    cursor: pointer;
 
 }
 
