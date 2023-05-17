@@ -117,4 +117,8 @@
 
 }
 
+.topicsContainer:hover{
+    color:blueviolet;
+}
+
 </style>
