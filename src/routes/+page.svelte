@@ -31,6 +31,8 @@
         "We got you covered"
     ]
 
+    const politicalTopics = ["Brazil","Presdential","Biden","Trump","China","Oil","Cobalt"]
+
     let username;
     onMount(async () => {
         userSession.subscribe(storeValue => {
@@ -72,7 +74,7 @@
         </div>
         <div class ="newsLinks">
             <article class ="news-links-article">
-
+                
 
             </article>
         </div>
