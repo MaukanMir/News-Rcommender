@@ -74,7 +74,11 @@
         </div>
         <div class ="newsLinks">
             <article class ="news-links-article">
-                
+                {#each politicalTopics as topic}
+                <div class ="topicsContainer">
+
+                </div>
+                {/each}
 
             </article>
         </div>
