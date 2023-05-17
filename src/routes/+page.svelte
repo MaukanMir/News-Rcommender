@@ -70,6 +70,12 @@
             {/if}
             {/each}
         </div>
+        <div class ="newsLinks">
+            <article class ="news-links-article">
+
+
+            </article>
+        </div>
 
 </body>
 
@@ -83,6 +89,11 @@
     justify-content: center;
     align-items: center;
     margin-top: 200px;
+}
+
+.newsLinks{
+    display: flex;
+    flex-direction: column;
 }
 
 </style>
