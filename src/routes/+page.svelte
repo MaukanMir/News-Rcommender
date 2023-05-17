@@ -104,14 +104,14 @@
     justify-content: center;
     align-items: center;
     margin-top: 70px;
+    padding:20px;
 }
 
 .news-links-article{
-
+    border: whitesmoke solid 3px;
 }
 
-.topicsContainer{
-    border: whitesmoke solid 3px;
+.topicsContainer{margin: 10px 10px;
 
 }
 
