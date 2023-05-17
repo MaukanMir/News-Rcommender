@@ -73,6 +73,7 @@
             {/each}
         </div>
         <div class ="newsLinks">
+            <h1 class ="topic-header">Trending Now</h1>
             <article class ="news-links-article">
                 {#each politicalTopics as topic}
                 <div class ="topicsContainer">
@@ -102,7 +103,6 @@
     display:flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     margin-top: 70px;
     padding:20px;
 }
