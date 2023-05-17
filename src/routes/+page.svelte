@@ -76,6 +76,7 @@
             <article class ="news-links-article">
                 {#each politicalTopics as topic}
                 <div class ="topicsContainer">
+                    <p>{topic}</p>
 
                 </div>
                 {/each}
@@ -98,8 +99,20 @@
 }
 
 .newsLinks{
-    display: flex;
+    display:flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+}
+
+.news-links-article{
+
+}
+
+.topicsContainer{
+    border: whitesmoke solid 3px;
+
 }
 
 </style>
